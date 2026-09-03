@@ -22,6 +22,8 @@ const DEFAULT_PITCH_INPUTS = {
   serviceId: 'web-development',
   clientProblem: '',
   includeRate: true,
+  portfolioLink: '',
+  socialMediaLink: '',
 }
 
 export default function App() {
