@@ -103,19 +103,7 @@ export default function PitchGenerator({ inputs, onChange, hourlyRate, onCopy })
               className="w-full resize-none rounded-lg border border-slate-300 bg-white px-3.5 py-3 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-indigo-500"
             />
           </div>
-
-          <label className="flex cursor-pointer items-start gap-2.5 rounded-lg border border-slate-200 bg-slate-50 p-3.5 text-sm text-slate-600">
-            <input
-              type="checkbox"
-              checked={inputs.includeRate}
-              onChange={(event) =>
-                onChange({ ...inputs, includeRate: event.target.checked })
-              }
-              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-            />
-            Sertakan tarif per jam dari Kalkulator Tarif di draf ini
-          </label>
-
+          
           <div className="border-t border-slate-100 pt-5">
             <h3 className="mb-1 text-sm font-medium text-slate-700">
               Tautan portofolio &amp; media sosial
@@ -154,6 +142,17 @@ export default function PitchGenerator({ inputs, onChange, hourlyRate, onCopy })
               </div>
             </div>
           </div>
+          <label className="flex cursor-pointer items-start gap-2.5 rounded-lg border border-slate-200 bg-slate-50 p-3.5 text-sm text-slate-600">
+            <input
+              type="checkbox"
+              checked={inputs.includeRate}
+              onChange={(event) =>
+                onChange({ ...inputs, includeRate: event.target.checked })
+              }
+              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+            />
+            Sertakan tarif per jam dari Kalkulator Tarif di draf ini
+          </label>
         </div>
       </section>
 
