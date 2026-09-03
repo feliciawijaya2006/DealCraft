@@ -14,6 +14,8 @@ export default function PitchGenerator({ inputs, onChange, hourlyRate, onCopy })
         clientProblem: inputs.clientProblem,
         includeRate: inputs.includeRate,
         hourlyRate,
+        portfolioLink: inputs.portfolioLink,
+        socialMediaLink: inputs.socialMediaLink,
       }),
     [inputs, preset, hourlyRate],
   )
@@ -113,6 +115,45 @@ export default function PitchGenerator({ inputs, onChange, hourlyRate, onCopy })
             />
             Sertakan tarif per jam dari Kalkulator Tarif di draf ini
           </label>
+
+          <div className="border-t border-slate-100 pt-5">
+            <h3 className="mb-1 text-sm font-medium text-slate-700">
+              Tautan portofolio &amp; media sosial
+            </h3>
+            <p className="mb-4 text-xs text-slate-400">
+              Opsional — akan otomatis disertakan sebagai lampiran tautan di draf pitching.
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="portfolioLink" className="mb-1.5 block text-sm font-medium text-slate-700">
+                  Link portofolio
+                </label>
+                <input
+                  id="portfolioLink"
+                  type="url"
+                  placeholder="https://portfolio-saya.com"
+                  value={inputs.portfolioLink || ''}
+                  onChange={update('portfolioLink')}
+                  className="h-11 w-full rounded-lg border border-slate-300 bg-white px-3.5 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-indigo-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="socialMediaLink" className="mb-1.5 block text-sm font-medium text-slate-700">
+                  Link media sosial
+                </label>
+                <input
+                  id="socialMediaLink"
+                  type="url"
+                  placeholder="https://instagram.com/username"
+                  value={inputs.socialMediaLink || ''}
+                  onChange={update('socialMediaLink')}
+                  className="h-11 w-full rounded-lg border border-slate-300 bg-white px-3.5 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-indigo-500"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
